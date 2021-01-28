@@ -3,6 +3,7 @@
 👨‍🏫 How to make ? | Blog  
 https://www.gokhandogru.net/xamarin-forms-xamexxen-ui/
 
+*If you like this repository or you've learned something please give a star ⭐Thanks!
 
 | Android | IOS |
 | ------------- | ------------- |
