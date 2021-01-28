@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:fonticons="clr-namespace:XamExxen.Fonts"
+             xmlns:local="clr-namespace:XamExxen.Helper"
+             xmlns:custom="clr-namespace:XamExxen.Renderers" 
+             xmlns:models="clr-namespace:XamExxen.Models"
+             x:Class="XamExxen.Views.DetailPage"
+             xmlns:sharedTransitions="clr-namespace:Plugin.SharedTransitions;assembly=Plugin.SharedTransitions" 
+             BackgroundColor="{StaticResource colorBlack}"
+             NavigationPage.HasNavigationBar="False">
+
+    <ScrollView VerticalScrollBarVisibility="Never">
+        <Grid RowDefinitions="15,65,250,60,40,130,Auto,260"
+              RowSpacing="0">
+
+            <!--#region Series Logo -->
+            <StackLayout Grid.Row="0" >
+                <Image HeightRequest="450" Aspect="AspectFill" 
+                       Source="{Binding MovieBaseModel.SeriesImage}"
+                       sharedTransitions:Transition.Name="XamExxen"/>
+            </StackLayout>
+            <!--#endregion-->
+
+            <!--#region Profile Bar -->
+            <Grid Grid.Row="1" Margin="20,0,0,0"
+                  ColumnDefinitions="*,50,50" >
+
+                <Image VerticalOptions="Center" HorizontalOptions="Start" 
+                   WidthRequest="90"
+                   Source="{local:ImageResourceExtension XamExxen.Images.Exxen.png}"/>
+
+                <Grid Grid.Column="2" >
+                    <Image HorizontalOptions="Center" VerticalOptions="Center" 
+                       HeightRequest="50" 
+                       Aspect="AspectFill"
+                       Margin="0,15,0,0"
+                       Source="{local:ImageResourceExtension XamExxen.Images.Profile.png}">
+                        <Image.Clip>
+                            <EllipseGeometry
+                            Center="17,17"
+                            RadiusX="17"
+                            RadiusY="17"/>
+                        </Image.Clip>
+                    </Image>
+                </Grid>
+            </Grid>
+            <!--#endregion-->
+
+            <!--#region Series Info -->
+            <Grid Grid.Row="3" Margin="20,0,15,0" 
+                      ColumnDefinitions="*,100">
+                <Grid RowDefinitions="18,50,20" 
+                      RowSpacing="-3">
+                    <Label Text="{Binding MovieBaseModel.SeriesGenre}" FontFamily="FontMontserratBold" TextColor="{StaticResource colorYellow}"/>
+                    <Label Grid.Row="1" Text="{Binding MovieBaseModel.SeriesName}" FontSize="35" FontAttributes="Bold" FontFamily="FontMontserratBold" TextColor="White"/>
+                    <Grid Grid.Row="2" ColumnDefinitions="35,*">
+                        <Label Text="{Binding MovieBaseModel.SeriesYear}" FontSize="15" FontFamily="FontMontserratMedium" TextColor="White"/>
+                        <Label Grid.Column="1" FontFamily="Icons" 
+                           FontSize="20" 
+                           HorizontalTextAlignment="Start"
+                           Text="{x:Static fonticons:FontIcons.HighDefinitionBox}"
+                           TextColor="{StaticResource colorGray56}"/>
+                    </Grid>
+                </Grid>
+            </Grid>
+            <!--#endregion-->
+
+            <!--#region Play & Download & Like & Fav & Share -->
+            <Grid Grid.Row="5" Margin="20,0,20,20"
+                  RowSpacing="10">
+
+                <Grid ColumnDefinitions="250,*">
+                    <Button Text="Oynat" CornerRadius="5"
+                        FontFamily="FontMontserratBold" 
+                        BackgroundColor="{StaticResource colorYellow}"
+                        TextColor="{StaticResource colorBlack}"/>
+
+                    <Button Grid.Column="1" CornerRadius="5"
+                        FontSize="25" FontFamily="Icons" 
+                        BackgroundColor="{StaticResource colorWhite}"
+                        Text="{x:Static fonticons:FontIcons.TrayPlus}"
+                        TextColor="{StaticResource colorBlack}"/>
+                </Grid>
+                
+                <Grid Grid.Row="1" HorizontalOptions="Center"
+                      ColumnSpacing="0"
+                      ColumnDefinitions="100,100,100">
+
+                    <Grid RowDefinitions="38,12">
+
+                        <custom:CustomButton CornerRadius="5"
+                            VerticalTextAlignment="Start"
+                            FontSize="25" FontFamily="Icons" 
+                            BackgroundColor="{StaticResource colorBlack}"
+                            Text="{x:Static fonticons:FontIcons.HeartOutline}"
+                            TextColor="{StaticResource colorWhite}"/>
+                        
+                        <Label Text="Favorilerim"
+                               Grid.Row="1"
+                               FontSize="10" 
+                               VerticalTextAlignment="Start" HorizontalTextAlignment="Center"
+                               TextColor="{StaticResource colorWhite}"/>
+                    </Grid>
+
+                    <Grid Grid.Column="1" RowDefinitions="38,12">
+
+                        <custom:CustomButton CornerRadius="5" 
+                            VerticalTextAlignment="Start"
+                            FontSize="25" FontFamily="Icons" 
+                            BackgroundColor="{StaticResource colorBlack}"
+                            Text="{x:Static fonticons:FontIcons.ThumbUpOutline}"
+                            TextColor="{StaticResource colorWhite}"/>
+
+                        <Label Text="Beğen"
+                               Grid.Row="1"
+                               FontSize="10" 
+                               VerticalTextAlignment="Start" HorizontalTextAlignment="Center"
+                               TextColor="{StaticResource colorWhite}"/>
+                    </Grid>
+
+                    <Grid Grid.Column="2" RowDefinitions="38,12">
+                        
+                        <custom:CustomButton CornerRadius="5" 
+                            VerticalTextAlignment="Start"
+                            FontSize="25" FontFamily="Icons" 
+                            BackgroundColor="{StaticResource colorBlack}"
+                            Text="{x:Static fonticons:FontIcons.ExportVariant}"
+                            TextColor="{StaticResource colorWhite}"/>
+
+                        <Label Text="Paylaş"
+                               Grid.Row="1"
+                               FontSize="10" 
+                               VerticalTextAlignment="Start" HorizontalTextAlignment="Center"
+                               TextColor="{StaticResource colorWhite}"/>
+                    </Grid> 
+ 
+                </Grid>
+ 
+            </Grid>
+            <!--#endregion-->
+
+            <!--#region Description -->
+            <Grid Grid.Row="6" Margin="20,10,15,0"
+                  RowDefinitions="30,Auto">
+                <Grid ColumnDefinitions="*,30"
+                      RowDefinitions="25">
+                    <Label Text="Hakkında" FontSize="20" FontFamily="FontMontserratBold" TextColor="{StaticResource colorWhite}"/>
+
+                    <Grid Grid.Column="1"
+                          BackgroundColor="{StaticResource colorYellow}">
+                        
+                        <Label FontFamily="Icons" 
+                           FontSize="17" 
+                           VerticalTextAlignment="Center"
+                           FontAttributes="Bold"
+                           HorizontalTextAlignment="End"
+                           Text="{x:Static fonticons:FontIcons.AlphaH}"
+                           TextColor="{StaticResource colorBlack26}"/>
+                    </Grid> 
+                </Grid>
+                <Label Grid.Row="1"
+                       FontSize="12"
+                       Text="{Binding MovieBaseModel.SeriesDescription}"
+                       TextColor="{StaticResource colorWhite163}"/>
+            </Grid>
+            <!--#endregion-->
+
+            <!--#region Cast -->
+            <Grid Grid.Row="7" Margin="20,10,15,0"
+                  RowDefinitions="30,*">
+                
+                <Label Text="Oyuncular" FontSize="20" FontFamily="FontMontserratBold" TextColor="{StaticResource colorWhite}"/>
+                
+                <CollectionView Grid.Row="1"
+                    HorizontalScrollBarVisibility="Never"
+                    ItemsSource="{Binding Casts}">
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout Orientation="Horizontal" />
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate  x:DataType="models:Cast">
+                            <Grid Padding="0,0,10,0"
+                                  RowDefinitions="150,33">
+                                
+                                <StackLayout >
+                                    <Frame CornerRadius="10"  
+                                        Padding="0" BackgroundColor="{StaticResource colorBlack}"
+                                        IsClippedToBounds="True">
+                                        <Image HorizontalOptions="Start" HeightRequest="170" WidthRequest="150" Aspect="AspectFill" Source="{Binding CastImage}" />
+                                    </Frame>
+                                </StackLayout>
+                
+                                <Grid Grid.Row="1" BackgroundColor="{StaticResource colorBlack}" Opacity="0.8" />
+                                <Label Grid.Row="1" 
+                                       FontSize="10"
+                                       FontFamily="FontMontserratBold"
+                                       HorizontalTextAlignment="Center"
+                                       Text="{Binding CastFullName}"
+                                       TextColor="{StaticResource colorYellow}"/>
+                
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView> 
+            </Grid> 
+            <!--#endregion-->
+ 
+        </Grid>
+    </ScrollView>
+
+</ContentPage>

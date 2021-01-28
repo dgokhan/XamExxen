@@ -1,0 +1,376 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:XamExxen.Helper"
+             x:Class="XamExxen.Views.MainPage"    
+             xmlns:fonticons="clr-namespace:XamExxen.Fonts" 
+             xmlns:custom="clr-namespace:XamExxen.Renderers"
+             xmlns:models="clr-namespace:XamExxen.Models"
+             xmlns:sharedTransitions="clr-namespace:Plugin.SharedTransitions;assembly=Plugin.SharedTransitions" 
+             BackgroundColor="{StaticResource colorBlack}"
+             NavigationPage.HasNavigationBar="False">
+
+    <Grid RowDefinitions="15,65,*,60" 
+          RowSpacing="0">
+
+        <!--#region | Top Bar | -->
+        <Grid Grid.Row="1" 
+              ColumnDefinitions="*,50,50" >
+
+            <Image VerticalOptions="Center" HorizontalOptions="Start" 
+                   WidthRequest="90"
+                   Source="{local:ImageResourceExtension XamExxen.Images.Exxen.png}"/>
+
+            <Button VerticalOptions="Center" HorizontalOptions="Start" 
+                   Grid.Column="1"  FontFamily="Icons" 
+                   FontSize="25"
+                   Text="{x:Static fonticons:FontIcons.HeartOutline}"
+                   TextColor="White"
+                   BackgroundColor="{StaticResource colorBlack}"/>
+
+            <Grid Grid.Column="2" >
+                <Image HorizontalOptions="Center" VerticalOptions="Center" 
+                       HeightRequest="50" 
+                       Aspect="AspectFill"
+                       Margin="0,15,0,0"
+                       Source="{local:ImageResourceExtension XamExxen.Images.Profile.png}">
+                    <Image.Clip>
+                        <EllipseGeometry
+                            Center="17,17"
+                            RadiusX="17"
+                            RadiusY="17"/>
+                    </Image.Clip>
+                </Image>
+            </Grid>
+        </Grid>
+        <!--#endregion-->
+
+        <!--#region | Homepage | -->
+        <ScrollView Grid.Row="2" VerticalScrollBarVisibility="Never" 
+          Margin="20,0,0,0">
+            <Grid RowDefinitions="20,210,20,60,150,220,20">
+
+                <!--#region Exxen Yapımları -->
+                <Grid ColumnSpacing="5"
+                  ColumnDefinitions="Auto,Auto,Auto">
+                    <Label Text="Orjinal" VerticalTextAlignment="Start" TextColor="White"/>
+                    <Label Grid.Column="1" Text="EXXEN" VerticalTextAlignment="Start" FontFamily="FontMontserratBold" TextColor="{StaticResource colorYellow}" />
+                    <Label Grid.Column="2" Text="Yapımları" TextColor="White" />
+                </Grid>
+                <!--#endregion-->
+
+                <!--#region Sliders -->
+                <StackLayout Grid.Row="1" Margin="0,0,20,0">
+                    <Frame CornerRadius="10"  
+                        Padding="0" BackgroundColor="{StaticResource colorBlack}"
+                        IsClippedToBounds="True">
+                        <Image HeightRequest="230" Source="{local:ImageResourceExtension XamExxen.Images.Konusanlar.png}" />
+                    </Frame>
+                </StackLayout>
+
+                <!--#region Sliders Info -->
+                <Grid Grid.Row="2" Margin="20,-85,15,0" 
+                      ColumnDefinitions="*,100">
+
+                    <Grid RowDefinitions="15,40,20" 
+                          RowSpacing="-2">
+                        <Label Text="Bölüm 18" FontFamily="FontMontserratBold" TextColor="{StaticResource colorYellow}"/>
+                        <Label Grid.Row="1" Text="Konuşanlar" FontSize="30" FontFamily="FontMontserratBold" TextColor="White"/>
+                        <Label Grid.Row="2" Text="Stand-up, Komedi" FontSize="12" FontFamily="FontMontserratRegular" TextColor="White"/>
+                    </Grid>
+                    <Grid Grid.Column="1" 
+                          HorizontalOptions="Center"
+                          VerticalOptions="Center">
+
+                        <Label HorizontalTextAlignment="Center"
+                               FontFamily="Icons" 
+                               FontSize="50"
+                               Text="{x:Static fonticons:FontIcons.PlayBox}"
+                               TextColor="{StaticResource colorYellow}">
+                        </Label>
+
+                    </Grid>
+
+                </Grid>
+                <!--#endregion-->
+                <!--#endregion-->
+
+                <!--#region Search -->
+                <StackLayout Grid.Row="3">
+                    <Frame CornerRadius="7"  
+                        Padding="0" BackgroundColor="{StaticResource colorBlack26}">
+
+                        <Grid ColumnDefinitions="50,*"
+                              RowDefinitions="50">
+                            <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" 
+                                   FontFamily="Icons" 
+                                   FontSize="20"
+                                   Text="{x:Static fonticons:FontIcons.Magnify}"
+                                   TextColor="{StaticResource colorWhite206}"
+                                   BackgroundColor="{StaticResource colorBlack26}"/>
+
+                            <custom:CustomEntry Grid.Column="1"
+                                   VerticalTextAlignment="Center"
+                                   FontSize="12"
+                                   FontFamily="FontMontserratSemiBold"
+                                   Placeholder="Dizi, Video ve Film Ara.."
+                                   PlaceholderColor="{StaticResource colorGray56}"
+                                   TextColor="{StaticResource colorWhite206}"
+                                   BackgroundColor="{StaticResource colorBlack26}"/>
+                        </Grid>
+
+                    </Frame>
+                </StackLayout>
+                <!--#endregion-->
+
+                <!--#region KeepWatching -->
+                <Grid Grid.Row="4" 
+                      RowDefinitions="25,110">
+
+                    <Label Text="İzlemeye Devam Et" 
+                           VerticalTextAlignment="Start" 
+                           FontFamily="FontMontserratBold"
+                           TextColor="{StaticResource colorWhite}" />
+
+                    <CollectionView Grid.Row="1"
+                        x:Name="listKeepWatching"
+                        HorizontalScrollBarVisibility="Never"
+                        ItemsSource="{Binding KeepWatchings}">
+                        <CollectionView.ItemsLayout>
+                            <LinearItemsLayout Orientation="Horizontal" />
+                        </CollectionView.ItemsLayout>
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate x:DataType="models:KeepWatching">
+                                <Grid Padding="0,0,10,0">
+                                    <StackLayout>
+                                        <Frame CornerRadius="10"  
+                                            Padding="0" BackgroundColor="{StaticResource colorBlack}"
+                                            IsClippedToBounds="True">
+                                            <Image HorizontalOptions="Start" 
+                                                   HeightRequest="110" WidthRequest="210"
+                                                   Aspect="AspectFill" 
+                                                   sharedTransitions:Transition.Group="{Binding Id}"
+                                                   sharedTransitions:Transition.Name="XamExxen"
+                                                   Source="{Binding SeriesImage}" />
+                                        </Frame>
+                                    </StackLayout>
+
+                                    <Grid RowDefinitions="33"
+                                          Margin="5,75,0,0"
+                                          ColumnDefinitions="33,*">
+
+                                        <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" 
+                                               FontFamily="Icons" 
+                                               FontSize="33"
+                                               Text="{x:Static fonticons:FontIcons.PlayBox}"
+                                               TextColor="{StaticResource colorYellow}"/>
+
+                                        <Grid Grid.Column="1" 
+                                              RowDefinitions="18,3">
+
+                                            <Grid ColumnDefinitions="Auto,*">
+
+                                                <Label Text="{Binding SeriesName}" 
+                                                       VerticalTextAlignment="End"
+                                                       FontFamily="FontMontserratBold" 
+                                                       FontSize="12"
+                                                       TextColor="{StaticResource colorWhite}" />
+
+                                                <Label Text="{Binding ActiveEpAndSeaNumber}" 
+                                                       Margin="0,0,5,0"
+                                                       VerticalTextAlignment="End"
+                                                       HorizontalTextAlignment="End"
+                                                       FontFamily="FontMontserratBold" 
+                                                       FontSize="10"
+                                                       Grid.Column="1"
+                                                       TextColor="{StaticResource colorYellow}" />
+                                            </Grid>
+
+                                            <Line Grid.Row="1" 
+                                               X1="0"
+                                               Y1="5"
+                                               X2="150"
+                                               Y2="5"
+                                               StrokeLineCap="Round"
+                                               Stroke="#333438"
+                                               StrokeThickness="12" />
+
+                                            <Line Grid.Row="1" 
+                                               X1="0"
+                                               Y1="5"
+                                               X2="{Binding PercentageOfWatch}"
+                                               Y2="5"
+                                               StrokeLineCap="Round"
+                                               Stroke="#fbca01"
+                                               StrokeThickness="12" />
+                                        </Grid>
+
+                                    </Grid>
+                                    
+                                    <Grid.GestureRecognizers>
+                                        <TapGestureRecognizer
+                                            Command="{Binding Path=BindingContext.SelectSeriesCommand, Source={x:Reference listKeepWatching}}"
+                                            CommandParameter="{Binding .}"
+                                            NumberOfTapsRequired="1" />
+                                    </Grid.GestureRecognizers>
+                                </Grid>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </Grid>
+                <!--#endregion-->
+
+                <!--#region Editors Recommendations -->
+                <Grid Grid.Row="5" RowDefinitions="25,*">
+
+                    <Grid ColumnDefinitions="Auto" ColumnSpacing="5">
+
+                        <Label Text="Editörün" 
+                           VerticalTextAlignment="Start" 
+                           FontFamily="FontMontserratBold"
+                           TextColor="{StaticResource colorWhite}" />
+
+                        <Label Grid.Column="1"
+                           Text="Seçtikleri" 
+                           VerticalTextAlignment="Start" 
+                           FontFamily="FontMontserratBold"
+                           TextColor="{StaticResource colorWhite}" />
+                    </Grid>
+
+                    <CollectionView Grid.Row="1"
+                        x:Name="listEditorsRecommendations"
+                        HorizontalScrollBarVisibility="Never"
+                        ItemsSource="{Binding EditorsRecommendations}">
+                        <CollectionView.ItemsLayout>
+                            <LinearItemsLayout Orientation="Horizontal" />
+                        </CollectionView.ItemsLayout>
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate x:DataType="models:EditorsRecommendation">
+                                <Grid Padding="0,0,10,0"
+                                      RowDefinitions="*,33">
+                                    <StackLayout>
+                                        <Frame CornerRadius="10"  
+                                            Padding="0" BackgroundColor="{StaticResource colorBlack}"
+                                            IsClippedToBounds="True">
+                                            <Image HorizontalOptions="Start" HeightRequest="170" WidthRequest="120"
+                                                   Aspect="AspectFill" 
+                                                   Source="{Binding SeriesPosterImage}"
+                                                   sharedTransitions:Transition.Group="{Binding Id}"
+                                                   sharedTransitions:Transition.Name="XamExxen"/>
+                                        </Frame>
+                                    </StackLayout>
+ 
+                                    <Label Grid.Row="1"
+                                           FontFamily="Icons" 
+                                           FontSize="33"
+                                           HorizontalTextAlignment="Center"
+                                           Text="{x:Static fonticons:FontIcons.PlayBox}"
+                                           TextColor="{StaticResource colorYellow}"/>
+                                    
+                                    <Grid.GestureRecognizers>
+                                        <TapGestureRecognizer
+                                            Command="{Binding Path=BindingContext.SelectRecSeriesCommand, Source={x:Reference listEditorsRecommendations}}"
+                                            CommandParameter="{Binding .}"
+                                            NumberOfTapsRequired="1" />
+                                    </Grid.GestureRecognizers> 
+                                </Grid>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </Grid>
+                <!--#endregion-->
+
+            </Grid>
+        </ScrollView>
+        <!--#endregion-->
+        
+        <!--#region | BottomBar| -->
+        <Grid Grid.Row="3"
+              BackgroundColor="{StaticResource colorYellow}"
+              RowDefinitions="60">
+
+            <Grid Grid.Column="0" 
+                  VerticalOptions="Center" HorizontalOptions="Center"
+                  RowDefinitions="20,10">
+
+                <Label FontFamily="Icons" 
+                       FontSize="20"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Start"
+                       Text="{x:Static fonticons:FontIcons.ArrowUpBold}"
+                       TextColor="{StaticResource colorBlack}"/>
+
+                <Label Grid.Row="1" FontFamily="FontMontserratSemiBold" 
+                       VerticalTextAlignment="End" 
+                       TextColor="{StaticResource colorBlack}"
+                       FontSize="10" Text="Exxen"/>
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding GoToHomePageCommand}" NumberOfTapsRequired="1" />
+                </Grid.GestureRecognizers>
+            </Grid>
+            <Grid Grid.Column="1" 
+                  VerticalOptions="Center" HorizontalOptions="Center"
+                  RowDefinitions="20,10">
+
+                <Label FontFamily="Icons" 
+                       FontSize="20"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Start"
+                       Text="{x:Static fonticons:FontIcons.CalendarWeek}"
+                       TextColor="{StaticResource colorGray56}"/>
+
+                <Label Grid.Row="1" FontFamily="FontMontserratSemiBold" 
+                       VerticalTextAlignment="End" 
+                       TextColor="{StaticResource colorGray56}"
+                       FontSize="10" Text="Yakında"/>
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding GoToInfoPageCommand}" NumberOfTapsRequired="1" />
+                </Grid.GestureRecognizers>
+            </Grid>
+
+
+            <Grid Grid.Column="2" 
+                  VerticalOptions="Center" HorizontalOptions="Center"
+                  RowDefinitions="20,10">
+
+                <Label FontFamily="Icons" 
+                       FontSize="20"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Start"
+                       Text="{x:Static fonticons:FontIcons.TrayPlus}"
+                       TextColor="{StaticResource colorGray56}"/>
+
+                <Label Grid.Row="1" FontFamily="FontMontserratSemiBold" 
+                       VerticalTextAlignment="End" 
+                       TextColor="{StaticResource colorGray56}"
+                       FontSize="10" Text="İndirilenler"/>
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding GoToInfoPageCommand}" NumberOfTapsRequired="1" />
+                </Grid.GestureRecognizers>
+            </Grid>
+
+            <Grid Grid.Column="3" 
+                  VerticalOptions="Center" HorizontalOptions="Center"
+                  RowDefinitions="20,10">
+
+                <Label FontFamily="Icons" 
+                       FontSize="20"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Start"
+                       Text="{x:Static fonticons:FontIcons.CogOutline}"
+                       TextColor="{StaticResource colorGray56}"/>
+
+                <Label Grid.Row="1" FontFamily="FontMontserratSemiBold" 
+                       VerticalTextAlignment="End" 
+                       TextColor="{StaticResource colorGray56}"
+                       FontSize="10" Text="Ayarlar"/>
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding GoToInfoPageCommand}" NumberOfTapsRequired="1" />
+                </Grid.GestureRecognizers>
+            </Grid>
+        </Grid>
+        <!--#endregion-->
+        
+    </Grid>
+
+</ContentPage>

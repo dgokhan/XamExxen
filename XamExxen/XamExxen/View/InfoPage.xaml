@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamExxen.InfoPage" 
+             xmlns:fonticons="clr-namespace:XamExxen.Fonts" 
+             xmlns:local="clr-namespace:XamExxen.Helper" 
+             xmlns:renderers="clr-namespace:XamExxen.Renderers"
+             BackgroundColor="{StaticResource colorBlack}"
+             NavigationPage.HasNavigationBar="False">
+    <Grid RowDefinitions="*,60">
+        <Grid ColumnDefinitions="*,*" 
+              ColumnSpacing="20"
+              VerticalOptions="Center" HorizontalOptions="Center" >
+            
+            <Grid RowDefinitions="30,150,25">
+                <Label Grid.Row="0"  Text="Developer" TextColor="{StaticResource colorWhite}"/>
+                <Image Grid.Row="1" 
+                    WidthRequest="150"
+                    Aspect="AspectFill"
+                    VerticalOptions="Start"
+                    Source="{local:ImageResourceExtension XamExxen.Images.GokhanDogru.jpg}"/>
+                <Label Grid.Row="2" FontFamily="FontMontserratBold" Text="Gökhan DOĞRU" TextColor="{StaticResource colorWhite}"/>
+            </Grid>
+            
+            <Grid Grid.Column="1" RowDefinitions="30,150,25">
+                <Label Grid.Row="0"  Text="UI Designer" TextColor="{StaticResource colorWhite}"/>
+                <Image Grid.Row="1" 
+                    VerticalOptions="Start"
+                    Aspect="AspectFill"
+                    WidthRequest="150"
+                    Source="{local:ImageResourceExtension XamExxen.Images.OmerAslan.jpg}"/>
+                <Label Grid.Row="2" FontFamily="FontMontserratBold" Text="Ömer Aslan" TextColor="{StaticResource colorWhite}"/>
+            </Grid> 
+        </Grid>
+        
+        <!--#region | BottomBar| -->
+        <Grid Grid.Row="1"
+              VerticalOptions="End"
+              BackgroundColor="{StaticResource colorYellow}"
+              RowDefinitions="60">
+
+            <Grid Grid.Column="0" 
+                  VerticalOptions="Center" HorizontalOptions="Center"
+                  RowDefinitions="20,10">
+
+                <Label FontFamily="Icons" 
+                       FontSize="20"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Start"
+                       Text="{x:Static fonticons:FontIcons.ArrowUpBold}"
+                       TextColor="{StaticResource colorBlack}"/>
+
+                <Label Grid.Row="1" FontFamily="FontMontserratSemiBold" 
+                       VerticalTextAlignment="End" 
+                       TextColor="{StaticResource colorBlack}"
+                       FontSize="10" Text="Exxen"/>
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding GoToHomePageCommand}" NumberOfTapsRequired="1" />
+                </Grid.GestureRecognizers>
+            </Grid>
+            <Grid Grid.Column="1" 
+                  VerticalOptions="Center" HorizontalOptions="Center"
+                  RowDefinitions="20,10">
+
+                <Label FontFamily="Icons" 
+                       FontSize="20"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Start"
+                       Text="{x:Static fonticons:FontIcons.CalendarWeek}"
+                       TextColor="{StaticResource colorGray56}"/>
+
+                <Label Grid.Row="1" FontFamily="FontMontserratSemiBold" 
+                       VerticalTextAlignment="End" 
+                       TextColor="{StaticResource colorGray56}"
+                       FontSize="10" Text="Yakında"/>
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding GoToInfoPageCommand}" NumberOfTapsRequired="1" />
+                </Grid.GestureRecognizers>
+            </Grid>
+
+
+            <Grid Grid.Column="2" 
+                  VerticalOptions="Center" HorizontalOptions="Center"
+                  RowDefinitions="20,10">
+
+                <Label FontFamily="Icons" 
+                       FontSize="20"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Start"
+                       Text="{x:Static fonticons:FontIcons.TrayPlus}"
+                       TextColor="{StaticResource colorGray56}"/>
+
+                <Label Grid.Row="1" FontFamily="FontMontserratSemiBold" 
+                       VerticalTextAlignment="End" 
+                       TextColor="{StaticResource colorGray56}"
+                       FontSize="10" Text="İndirilenler"/>
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding GoToInfoPageCommand}" NumberOfTapsRequired="1" />
+                </Grid.GestureRecognizers>
+            </Grid>
+
+            <Grid Grid.Column="3" 
+                  VerticalOptions="Center" HorizontalOptions="Center"
+                  RowDefinitions="20,10">
+
+                <Label FontFamily="Icons" 
+                       FontSize="20"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Start"
+                       Text="{x:Static fonticons:FontIcons.CogOutline}"
+                       TextColor="{StaticResource colorGray56}"/>
+
+                <Label Grid.Row="1" FontFamily="FontMontserratSemiBold" 
+                       VerticalTextAlignment="End" 
+                       TextColor="{StaticResource colorGray56}"
+                       FontSize="10" Text="Ayarlar"/>
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding GoToInfoPageCommand}" NumberOfTapsRequired="1" />
+                </Grid.GestureRecognizers>
+            </Grid>
+        </Grid>
+        <!--#endregion-->
+        
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="1,0" EndPoint="0,1">
+                <GradientStop Color="#000000"
+                          Offset="0.1"/>
+                <GradientStop Color="#fbca01"
+                          Offset="1.0"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+    </Grid>
+</ContentPage>
