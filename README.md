@@ -1,7 +1,5 @@
 # XamExxen
 
-## TestUI
-
 | Android | IOS |
 | ------------- | ------------- |
 | ✅ | ⌛ |
