@@ -7,9 +7,8 @@ https://www.gokhandogru.net/xamarin-forms-xamexxen-ui/
 
 | Android | IOS |
 | ------------- | ------------- |
-| ✅ | ⌛ |
+| ✅ | ✅ |
 
-_** In the following days there will be a new update for IOS. I can't test for IOS as it is not a Mac for now._
 
 ![xamexxen.gif](https://raw.githubusercontent.com/dgokhan/XamExxen/main/gif/MainPage.gif)
 ![xamexxend.gif](https://raw.githubusercontent.com/dgokhan/XamExxen/main/gif/DetailPage.gif)

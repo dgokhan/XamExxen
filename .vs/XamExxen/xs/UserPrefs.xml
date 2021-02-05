@@ -1,0 +1,32 @@
+﻿<Properties HasIOSDesignerOverlayBeenDismissed="True" StartupConfiguration="{C3766C1B-DDC3-462C-B02B-EA218D2C4713}|Default">
+  <MonoDevelop.Ide.ItemProperties.XamExxen.iOS Xamarin.HotReload.DebuggerTimeoutException.XamExxen.iOS.HideInfoBar="True" TriggeredFromHotReload="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.8250358A-ED60-4BFA-9505-563D7FCFE9CA" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="XamExxen/XamExxen/ViewModels/DetailPageViewModel.cs">
+    <Files>
+      <File FileName="XamExxen/XamExxen/View/DetailPage.xaml" Line="35" Column="29" />
+      <File FileName="XamExxen/XamExxen/ViewModels/DetailPageViewModel.cs" Line="15" Column="10" />
+      <File FileName="XamExxen/XamExxen/ViewModels/MainPageViewModel.cs" Line="30" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="XamExxen" expanded="True">
+            <Node name="XamExxen" expanded="True">
+              <Node name="Fonts" expanded="True" />
+              <Node name="View" expanded="True" />
+              <Node name="ViewModels" expanded="True">
+                <Node name="DetailPageViewModel.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.XamExxen.Android TriggeredFromHotReload="False" PreferredExecutionTarget="Android.pixel_2_pie_9_0_-_api_28" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

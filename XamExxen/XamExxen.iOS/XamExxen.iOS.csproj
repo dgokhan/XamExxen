@@ -61,6 +61,7 @@
     <MtouchArch>ARM64</MtouchArch>
     <CodesignKey>iPhone Developer</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>SdkOnly</MtouchLink>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
@@ -113,6 +114,74 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
       <Visible>false</Visible>
     </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AcelyaTopaloglu.imageset\AcelyaTopaloglu.png" />
+    <ImageAsset Include="Assets.xcassets\AcelyaTopaloglu.imageset\AcelyaTopaloglu-1.png" />
+    <ImageAsset Include="Assets.xcassets\AcelyaTopaloglu.imageset\AcelyaTopaloglu-2.png" />
+    <ImageAsset Include="Assets.xcassets\AcelyaTopaloglu.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\MilliTakimHikayesi.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\MilliTakimHikayesi.imageset\MilliTakimHikayesi.jpg" />
+    <ImageAsset Include="Assets.xcassets\MilliTakimHikayesi.imageset\MilliTakimHikayesi-1.jpg" />
+    <ImageAsset Include="Assets.xcassets\MilliTakimHikayesi.imageset\MilliTakimHikayesi-2.jpg" />
+    <ImageAsset Include="Assets.xcassets\MilliTakimHikayesi.imageset\MilliTakimHikayesi-3.jpg" />
+    <ImageAsset Include="Assets.xcassets\MilliTakimHikayesi.imageset\MilliTakimHikayesi-4.jpg" />
+    <ImageAsset Include="Assets.xcassets\MilliTakimHikayesi.imageset\MilliTakimHikayesi-5.jpg" />
+    <ImageAsset Include="Assets.xcassets\MilliTakimHikayesi.imageset\MilliTakimHikayesi-6.jpg" />
+    <ImageAsset Include="Assets.xcassets\AcunIlicali.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AcunIlicali.imageset\AcunIlicali.png" />
+    <ImageAsset Include="Assets.xcassets\AlpKirsan.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ArdaTuran.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\EmreAltug.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ErtanSaban.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ErtanSaban.imageset\ErtanSaban.png" />
+    <ImageAsset Include="Assets.xcassets\EmreAltug.imageset\EmreAltug.png" />
+    <ImageAsset Include="Assets.xcassets\ArdaTuran.imageset\ArdaTuran.png" />
+    <ImageAsset Include="Assets.xcassets\AlpKirsan.imageset\AlpKirsan.png" />
+    <ImageAsset Include="Assets.xcassets\EsraEron.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\EsraEron.imageset\EsraEron.png" />
+    <ImageAsset Include="Assets.xcassets\FatihTerim.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\FeyyazYigit.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\GibiIcerik.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\GibiPoster.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\HalukBilginer.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\HasanCanKaya.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\KivancKilinc.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Konusanlar.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Konusanlar.imageset\Konusanlar.png" />
+    <ImageAsset Include="Assets.xcassets\KivancKilinc.imageset\KivancKilinc.png" />
+    <ImageAsset Include="Assets.xcassets\HasanCanKaya.imageset\HasanCanKaya.png" />
+    <ImageAsset Include="Assets.xcassets\HalukBilginer.imageset\HalukBilginer.png" />
+    <ImageAsset Include="Assets.xcassets\GibiPoster.imageset\GibiPoster.jpg" />
+    <ImageAsset Include="Assets.xcassets\GibiIcerik.imageset\GibiIcerik.png" />
+    <ImageAsset Include="Assets.xcassets\FeyyazYigit.imageset\FeyyazYigit.png" />
+    <ImageAsset Include="Assets.xcassets\FatihTerim.imageset\FatihTerim.png" />
+    <ImageAsset Include="Assets.xcassets\MilliTakimHikayesiIcerik.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\NergisKumbasar.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\NihatKahveci.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\SerefBey.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\SerefBeyPoster.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\SihirliAnnem.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\SihirliAnnemIcerik.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\SongulOden.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\SuprizimizVar.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\TolgaCevik.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\TolgShowFiltresiz.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ZeynepBastik.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ZeynepBastikIcerik.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ZeynepBastikPoster.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ZeynepBastikPoster.imageset\ZeynepBastikPoster.jpg" />
+    <ImageAsset Include="Assets.xcassets\ZeynepBastikIcerik.imageset\ZeynepBastikIcerik.png" />
+    <ImageAsset Include="Assets.xcassets\ZeynepBastik.imageset\ZeynepBastik.png" />
+    <ImageAsset Include="Assets.xcassets\TolgShowFiltresiz.imageset\TolgShowFiltresiz.jpg" />
+    <ImageAsset Include="Assets.xcassets\TolgaCevik.imageset\TolgaCevik.png" />
+    <ImageAsset Include="Assets.xcassets\SuprizimizVar.imageset\SuprizimizVar.jpg" />
+    <ImageAsset Include="Assets.xcassets\SongulOden.imageset\SongulOden.png" />
+    <ImageAsset Include="Assets.xcassets\SihirliAnnemIcerik.imageset\SihirliAnnemIcerik.png" />
+    <ImageAsset Include="Assets.xcassets\SihirliAnnem.imageset\SihirliAnnem.jpg" />
+    <ImageAsset Include="Assets.xcassets\SerefBeyPoster.imageset\SerefBeyPoster.jpg" />
+    <ImageAsset Include="Assets.xcassets\SerefBey.imageset\SerefBey.jpg" />
+    <ImageAsset Include="Assets.xcassets\NihatKahveci.imageset\NihatKahveci.png" />
+    <ImageAsset Include="Assets.xcassets\NergisKumbasar.imageset\NergisKumbasar.png" />
+    <ImageAsset Include="Assets.xcassets\MilliTakimHikayesiIcerik.imageset\MilliTakimHikayesiIcerik.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -132,8 +201,40 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\XamExxen\XamExxen.csproj">
-      <Project>{935185DD-6A1B-4BF9-B018-6A7382016EFC}</Project>
+      <Project>{7FFA5ECC-6C2B-4487-BBE1-3B45B1070F8B}</Project>
       <Name>XamExxen</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets.xcassets\AcelyaTopaloglu.imageset\" />
+    <Folder Include="Assets.xcassets\MilliTakimHikayesi.imageset\" />
+    <Folder Include="Assets.xcassets\AcunIlicali.imageset\" />
+    <Folder Include="Assets.xcassets\AlpKirsan.imageset\" />
+    <Folder Include="Assets.xcassets\ArdaTuran.imageset\" />
+    <Folder Include="Assets.xcassets\EmreAltug.imageset\" />
+    <Folder Include="Assets.xcassets\ErtanSaban.imageset\" />
+    <Folder Include="Assets.xcassets\EsraEron.imageset\" />
+    <Folder Include="Assets.xcassets\FatihTerim.imageset\" />
+    <Folder Include="Assets.xcassets\FeyyazYigit.imageset\" />
+    <Folder Include="Assets.xcassets\GibiIcerik.imageset\" />
+    <Folder Include="Assets.xcassets\GibiPoster.imageset\" />
+    <Folder Include="Assets.xcassets\HalukBilginer.imageset\" />
+    <Folder Include="Assets.xcassets\HasanCanKaya.imageset\" />
+    <Folder Include="Assets.xcassets\KivancKilinc.imageset\" />
+    <Folder Include="Assets.xcassets\Konusanlar.imageset\" />
+    <Folder Include="Assets.xcassets\MilliTakimHikayesiIcerik.imageset\" />
+    <Folder Include="Assets.xcassets\NergisKumbasar.imageset\" />
+    <Folder Include="Assets.xcassets\NihatKahveci.imageset\" />
+    <Folder Include="Assets.xcassets\SerefBey.imageset\" />
+    <Folder Include="Assets.xcassets\SerefBeyPoster.imageset\" />
+    <Folder Include="Assets.xcassets\SihirliAnnem.imageset\" />
+    <Folder Include="Assets.xcassets\SihirliAnnemIcerik.imageset\" />
+    <Folder Include="Assets.xcassets\SongulOden.imageset\" />
+    <Folder Include="Assets.xcassets\SuprizimizVar.imageset\" />
+    <Folder Include="Assets.xcassets\TolgaCevik.imageset\" />
+    <Folder Include="Assets.xcassets\TolgShowFiltresiz.imageset\" />
+    <Folder Include="Assets.xcassets\ZeynepBastik.imageset\" />
+    <Folder Include="Assets.xcassets\ZeynepBastikIcerik.imageset\" />
+    <Folder Include="Assets.xcassets\ZeynepBastikPoster.imageset\" />
   </ItemGroup>
 </Project>

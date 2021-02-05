@@ -16,7 +16,6 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
     <TargetFrameworkVersion>v10.0</TargetFrameworkVersion>
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
     <AndroidUseAapt2>true</AndroidUseAapt2>
@@ -95,7 +94,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\XamExxen\XamExxen.csproj">
-      <Project>{935185DD-6A1B-4BF9-B018-6A7382016EFC}</Project>
+      <Project>{7FFA5ECC-6C2B-4487-BBE1-3B45B1070F8B}</Project>
       <Name>XamExxen</Name>
     </ProjectReference>
   </ItemGroup>

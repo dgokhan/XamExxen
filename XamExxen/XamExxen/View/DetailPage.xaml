@@ -24,11 +24,15 @@
 
             <!--#region Profile Bar -->
             <Grid Grid.Row="1" Margin="20,0,0,0"
-                  ColumnDefinitions="*,50,50" >
+                  ColumnDefinitions="30,*,50" >
 
-                <Image VerticalOptions="Center" HorizontalOptions="Start" 
-                   WidthRequest="90"
-                   Source="{local:ImageResourceExtension XamExxen.Images.Exxen.png}"/>
+               <custom:CustomButton CornerRadius="5" 
+                            VerticalTextAlignment="Start"
+                            HorizontalTextAlignment="Start"
+                            FontSize="25" FontFamily="Icons" 
+                            Text="{x:Static fonticons:FontIcons.ArrowLeftCircle }"
+                            TextColor="{StaticResource colorYellow}"
+                            Command="{Binding BackToMainpage}"/>
 
                 <Grid Grid.Column="2" >
                     <Image HorizontalOptions="Center" VerticalOptions="Center" 

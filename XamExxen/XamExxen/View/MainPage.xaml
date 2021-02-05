@@ -10,7 +10,7 @@
              BackgroundColor="{StaticResource colorBlack}"
              NavigationPage.HasNavigationBar="False">
 
-    <Grid RowDefinitions="15,65,*,60" 
+    <Grid RowDefinitions="15,65,*,80" 
           RowSpacing="0">
 
         <!--#region | Top Bar | -->
@@ -18,7 +18,7 @@
               ColumnDefinitions="*,50,50" >
 
             <Image VerticalOptions="Center" HorizontalOptions="Start" 
-                   WidthRequest="90"
+                   WidthRequest="90" Margin="20,0,0,0"
                    Source="{local:ImageResourceExtension XamExxen.Images.Exxen.png}"/>
 
             <Button VerticalOptions="Center" HorizontalOptions="Start" 

@@ -16,11 +16,12 @@
     <None Remove="Fonts\Montserrat-Medium.ttf" />
     <None Remove="Fonts\Montserrat-Regular.ttf" />
     <None Remove="Fonts\Montserrat-SemiBold.ttf" />
-    <None Remove="Images\Exxen.png" />
     <None Remove="Images\GokhanDogru.jpg" />
     <None Remove="Images\Konusanlar.png" />
     <None Remove="Images\OmerAslan.jpg" />
     <None Remove="Images\Profile.png" />
+    <None Remove="Images\AcunIlicali.png" />
+    <None Remove="Images\Exxen.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -39,9 +40,6 @@
     <EmbeddedResource Include="Fonts\Montserrat-SemiBold.ttf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Images\Exxen.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
     <EmbeddedResource Include="Images\GokhanDogru.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -54,6 +52,7 @@
     <EmbeddedResource Include="Images\Profile.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="Images\Exxen.png" />
   </ItemGroup>
 
   <ItemGroup>
